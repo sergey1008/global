@@ -1,261 +1,231 @@
 <!doctype html>
-<html>
+<html lang="ru">
 <head>
-	<meta charset="utf-8">
-	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <meta charset="utf-8">
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
   <script type="text/javascript" src="js/jquery.onepage-scroll.js"></script>
-  <link href='css/onepage-scroll.css' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="css/styles.css">
-  <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=no">
+  <link rel="stylesheet" href="css/style.css">
 
-	<script>
-	  $(document).ready(function(){
+  <script>
+    $(document).ready(function(){
       $(".main").onepage_scroll({
         sectionContainer: "section",
         responsiveFallback: 600,
         loop: true
       });
+      $(".main-nav__toggle").click(function () {
+        $(".main-nav__list").toggle("slow", function() {
 
-			$(".main-nav__toggle").click(function () {
-				$(".main-nav__list").toggle("slow", function() {
-
-				});
-			});
-
-
-	    // $('section').hover(function(){
-	    //    var id = this[data-index="#' + id + '"];
-	    // });
-
-
-
-		});
-
-	</script>
-</head>
-<body>
-
-  <div class="wrapper">
-		<header>
-		    <div class="logo">
-		      <a href="index.html" class="logo__img"><img src="img/logo.png" alt="GLOBAL TRADE"></a>
-		    </div>
-
-		    <nav class="navbar main-nav main-nav--closed">
-		      <button class="main-nav__toggle" type="button">Открыть меню</button>
-		          <ul class="main-nav__list">
-		            <li class="main-nav__item"><a href="#" class="active">Главная</a></li>
-		            <li class="main-nav__item"><a href="#">О компании</a></li>
-		            <li class="main-nav__item"><a href="#">Партнеры</a></li>
-		            <li class="main-nav__item"><a href="#">Вакансии</a></li>
-		            <li class="main-nav__item"><a href="#">Контакты</a></li>
-		          </ul>
-		    </nav>
-
-		    <div class="contacts">
-		      <a href="tel:+7(347)222-20-30">+ 7 (347) 222-20-30</a>
-		      <button class="btn" type="button" name="button">Связаться с нами</button>
-		    </div>
-		</header>
-	  <div class="main">
-
-      <section class="page1 cosmetics" data-index="1">
-        <div class="page_container">
-					<div class="products cosmetics__img">
-			      <img src="img/slide1.png" alt="косметика">
-			    </div>
-			    <div class="products content cosmetics__content">
-						<div class="conteiner">
-			        <h2 data-index="1">Косметика</h2>
-			        <p>Повседневная практика показывает, что новая модель организационной деятельности играет важную роль в формировании системы обучения кадров, соответствует насущным потребностям. </p>
-			        <a href="" class="btn">Подробнее</a>
-						</div>
-			    </div>
-  	    </div>
-				<!-- <a href="#1" data-index="1">Косметика</a> -->
-      </section>
-
-	    <section class="page2 household-goods" id="household-goods">
-	      <div class="page_container">
-					<div class="products household-goods__img">
-				    <img src="img/slide2.png" alt="хозтовары">
-				  </div>
-				  <div class="products content household-goods__content">
-				    <div class="conteiner">
-				      <h2 data-index="2">Хозтовары</h2>
-				      <p>Повседневная практика показывает, что новая модель организационной деятельности играет важную роль в формировании системы обучения кадров, соответствует насущным потребностям. </p>
-				      <a href="" class="btn">Подробнее</a>
-				    </div>
-				  </div>
-	      </div>
-				<!-- <a href="#2" data-index="2">Хозтовары</a> -->
-      </section>
-
-	    <section class="page3 stationery">
-	      <div class="page_container">
-					<div class="products stationery__img">
-				    <img src="img/slide3.png" alt="канцтовары">
-				  </div>
-				  <div class="products content stationery__content">
-				    <div class="conteiner">
-				      <h2>Канцтовары</h2>
-				      <p>Повседневная практика показывает, что новая модель организационной деятельности играет важную роль в формировании системы обучения кадров, соответствует насущным потребностям. </p>
-				      <a class="btn" href="">Подробнее</a>
-				    </div>
-				  </div>
-  	    </div>
-      </section>
-
-			<section class="page4 electrical-goods">
-	      <div class="page_container">
-					<div class="products electrical-goodsy__img">
-				    <img src="img/slide4.png" alt="Электротовары">
-				  </div>
-				  <div class="products content electrical-goods__content">
-				    <div class="conteiner">
-				      <h2>Электротовары</h2>
-				      <p>Повседневная практика показывает, что новая модель организационной деятельности играет важную роль в формировании системы обучения кадров, соответствует насущным потребностям. </p>
-				      <a class="btn" href="">Подробнее</a>
-				    </div>
-				  </div>
-  	    </div>
-      </section>
-
-			<section class="page5 bbq">
-	      <div class="page_container">
-					<div class="products bbq__img">
-				    <img src="img/slide5.png" alt="Товары для гриля и барбекю">
-				  </div>
-				  <div class="products content bbq__content">
-				    <div class="conteiner">
-				      <h2>Товары для</br> гриля и барбекю</h2>
-				      <p>Повседневная практика показывает, что новая модель организационной деятельности играет важную роль в формировании системы обучения кадров, соответствует насущным потребностям. </p>
-				      <a class="btn" href="">Подробнее</a>
-				    </div>
-				  </div>
-  	    </div>
-      </section>
-
-			<section class="page6 bathhouse">
-	      <div class="page_container">
-					<div class="products bathhouse__img">
-				    <img src="img/slide6.png" alt="Баня и сауна">
-				  </div>
-				  <div class="products content bathhouse__content">
-				    <div class="conteiner">
-				      <h2>Баня и сауна</h2>
-				      <p>Повседневная практика показывает, что новая модель организационной деятельности играет важную роль в формировании системы обучения кадров, соответствует насущным потребностям. </p>
-				      <a class="btn" href="">Подробнее</a>
-				    </div>
-				  </div>
-  	    </div>
-      </section>
-
-			<section class="page7 appliances">
-	      <div class="page_container">
-					<div class="products appliances__img">
-				    <img src="img/slide7.png" alt="Бытовая техника">
-				  </div>
-				  <div class="products content appliances__content">
-				    <div class="conteiner">
-				      <h2>Бытовая техника</h2>
-				      <p>Повседневная практика показывает, что новая модель организационной деятельности играет важную роль в формировании системы обучения кадров, соответствует насущным потребностям. </p>
-				      <a class="btn" href="">Подробнее</a>
-				    </div>
-				  </div>
-  	    </div>
-      </section>
-
-			<section class="page8 lighters">
-	      <div class="page_container">
-					<div class="products lighters__img">
-				    <img src="img/slide8.png" alt="Зажигалки">
-				  </div>
-				  <div class="products content lighters__content">
-				    <div class="conteiner">
-				      <h2>Зажигалки</h2>
-				      <p>Повседневная практика показывает, что новая модель организационной деятельности играет важную роль в формировании системы обучения кадров, соответствует насущным потребностям. </p>
-				      <a class="btn" href="">Подробнее</a>
-				    </div>
-				  </div>
-  	    </div>
-      </section>
-
-			<section class="page9 сar-goods">
-	      <div class="page_container">
-					<div class="products сar-goods__img">
-				    <img src="img/slide9.png" alt="Автотовары">
-				  </div>
-				  <div class="products content сar-goods__content">
-				    <div class="conteiner">
-				      <h2>Автотовары</h2>
-				      <p>Повседневная практика показывает, что новая модель организационной деятельности играет важную роль в формировании системы обучения кадров, соответствует насущным потребностям. </p>
-				      <a class="btn" href="">Подробнее</a>
-				    </div>
-				  </div>
-  	    </div>
-      </section>
-
-			<section class="page10 products-children">
-	      <div class="page_container">
-					<div class="products products-children__img">
-				    <img src="img/slide10.png" alt="Товары для детей">
-				  </div>
-				  <div class="products content products-children__content">
-				    <div class="conteiner">
-				      <h2>Товары</br> для детей</h2>
-				      <p>Повседневная практика показывает, что новая модель организационной деятельности играет важную роль в формировании системы обучения кадров, соответствует насущным потребностям. </p>
-				      <a class="btn" href="">Подробнее</a>
-				    </div>
-				  </div>
-  	    </div>
-      </section>
-
-			<section class="page11 construction">
-	      <div class="page_container">
-					<div class="products construction__img">
-				    <img src="img/slide11.png" alt="Строительство и ремонт">
-				  </div>
-				  <div class="products content construction__content">
-				    <div class="conteiner">
-				      <h2>Строительство</br> и ремонт</h2>
-				      <p>Повседневная практика показывает, что новая модель организационной деятельности играет важную роль в формировании системы обучения кадров, соответствует насущным потребностям. </p>
-				      <a class="btn" href="">Подробнее</a>
-				    </div>
-				  </div>
-  	    </div>
-      </section>
-
-			<section class="page12 pet-supplies">
-	      <div class="page_container">
-					<div class="products pet-supplies__img">
-				    <img src="img/slide12.png" alt="Зоотовары">
-				  </div>
-				  <div class="products content pet-supplies__content">
-				    <div class="conteiner">
-				      <h2>Зоотовары</h2>
-				      <p>Повседневная практика показывает, что новая модель организационной деятельности играет важную роль в формировании системы обучения кадров, соответствует насущным потребностям. </p>
-				      <a class="btn" href="">Подробнее</a>
-				    </div>
-				  </div>
-  	    </div>
-      </section>
-
-			<section class="page13 horeca">
-	      <div class="page_container">
-					<div class="products horeca__img">
-				    <img src="img/slide13.png" alt="horeca">
-				  </div>
-				  <div class="products content horeca__content">
-				    <div class="conteiner">
-				      <h2>HoReCa</h2>
-				      <p>Повседневная практика показывает, что новая модель организационной деятельности играет важную роль в формировании системы обучения кадров, соответствует насущным потребностям. </p>
-							<a class="btn" href="">Подробнее</a>
-				    </div>
-				  </div>
-  	    </div>
-      </section>
+        });
+      });
+    });
+    </script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <div class="logo">
+          <a href="index.html" class="logo__img"><img src="img/logo.png" alt="GLOBAL TRADE"></a>
+        </div>
+        <nav class="navbar main-nav main-nav--closed">
+          <button class="main-nav__toggle" type="button">Открыть меню</button>
+          <ul class="main-nav__list">
+            <li class="main-nav__item"><a href="#" class="active">Главная</a></li>
+            <li class="main-nav__item"><a href="#">О компании</a></li>
+            <li class="main-nav__item"><a href="#">Партнеры</a></li>
+            <li class="main-nav__item"><a href="#">Вакансии</a></li>
+            <li class="main-nav__item"><a href="#">Контакты</a></li>
+          </ul>
+        </nav>
+        <div class="contacts">
+          <a href="tel:+7(347)222-20-30">+ 7 (347) 222-20-30</a>
+          <button class="btn" type="button" name="button">Связаться с нами</button>
+        </div>
+      </header>
+      <div class="main">
+        <section class="page1 cosmetics" data-index="1">
+          <div class="page_container">
+            <div class="products cosmetics__img">
+              <img src="img/slide1.png" alt="косметика">
+            </div>
+            <div class="products content cosmetics__content">
+              <div class="conteiner">
+                <h2 data-index="1">Косметика</h2>
+                <p>Повседневная практика показывает, что новая модель организационной деятельности играет важную роль в формировании системы обучения кадров, соответствует насущным потребностям.</p>
+                <a href="" class="btn">Подробнее</a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="page2 household-goods" id="household-goods">
+          <div class="page_container">
+            <div class="products household-goods__img">
+              <img src="img/slide2.png" alt="хозтовары">
+            </div>
+            <div class="products content household-goods__content">
+              <div class="conteiner">
+                <h2 data-index="2">Хозтовары</h2>
+                <p>Повседневная практика показывает, что новая модель организационной деятельности играет важную роль в формировании системы обучения кадров, соответствует насущным потребностям. </p>
+                <a href="" class="btn">Подробнее</a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="page3 stationery">
+          <div class="page_container">
+            <div class="products stationery__img">
+              <img src="img/slide3.png" alt="канцтовары">
+            </div>
+            <div class="products content stationery__content">
+              <div class="conteiner">
+                <h2>Канцтовары</h2>
+                <p>Повседневная практика показывает, что новая модель организационной деятельности играет важную роль в формировании системы обучения кадров, соответствует насущным потребностям. </p>
+                <a class="btn" href="">Подробнее</a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="page4 electrical-goods">
+          <div class="page_container">
+            <div class="products electrical-goodsy__img">
+              <img src="img/slide4.png" alt="Электротовары">
+            </div>
+            <div class="products content electrical-goods__content">
+              <div class="conteiner">
+                <h2>Электротовары</h2>
+                <p>Повседневная практика показывает, что новая модель организационной деятельности играет важную роль в формировании системы обучения кадров, соответствует насущным потребностям. </p>
+                <a class="btn" href="">Подробнее</a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="page5 bbq">
+          <div class="page_container">
+            <div class="products bbq__img">
+              <img src="img/slide5.png" alt="Товары для гриля и барбекю">
+            </div>
+            <div class="products content bbq__content">
+              <div class="conteiner">
+                <h2>Товары для</br> гриля и барбекю</h2>
+                <p>Повседневная практика показывает, что новая модель организационной деятельности играет важную роль в формировании системы обучения кадров, соответствует насущным потребностям. </p>
+                <a class="btn" href="">Подробнее</a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="page6 bathhouse">
+          <div class="page_container">
+            <div class="products bathhouse__img">
+              <img src="img/slide6.png" alt="Баня и сауна">
+            </div>
+            <div class="products content bathhouse__content">
+              <div class="conteiner">
+                <h2>Баня и сауна</h2>
+                <p>Повседневная практика показывает, что новая модель организационной деятельности играет важную роль в формировании системы обучения кадров, соответствует насущным потребностям. </p>
+                <a class="btn" href="">Подробнее</a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="page7 appliances">
+          <div class="page_container">
+            <div class="products appliances__img">
+              <img src="img/slide7.png" alt="Бытовая техника">
+            </div>
+            <div class="products content appliances__content">
+              <div class="conteiner">
+                <h2>Бытовая техника</h2>
+                <p>Повседневная практика показывает, что новая модель организационной деятельности играет важную роль в формировании системы обучения кадров, соответствует насущным потребностям. </p>
+                <a class="btn" href="">Подробнее</a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="page8 lighters">
+          <div class="page_container">
+            <div class="products lighters__img">
+              <img src="img/slide8.png" alt="Зажигалки">
+            </div>
+            <div class="products content lighters__content">
+              <div class="conteiner">
+                <h2>Зажигалки</h2>
+                <p>Повседневная практика показывает, что новая модель организационной деятельности играет важную роль в формировании системы обучения кадров, соответствует насущным потребностям. </p>
+                <a class="btn" href="">Подробнее</a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="page9 сar-goods">
+          <div class="page_container">
+            <div class="products сar-goods__img">
+              <img src="img/slide9.png" alt="Автотовары">
+            </div>
+            <div class="products content сar-goods__content">
+              <div class="conteiner">
+                <h2>Автотовары</h2>
+                <p>Повседневная практика показывает, что новая модель организационной деятельности играет важную роль в формировании системы обучения кадров, соответствует насущным потребностям. </p>
+                <a class="btn" href="">Подробнее</a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="page10 products-children">
+          <div class="page_container">
+            <div class="products products-children__img">
+              <img src="img/slide10.png" alt="Товары для детей">
+            </div>
+            <div class="products content products-children__content">
+              <div class="conteiner">
+                <h2>Товары</br> для детей</h2>
+                <p>Повседневная практика показывает, что новая модель организационной деятельности играет важную роль в формировании системы обучения кадров, соответствует насущным потребностям. </p>
+                <a class="btn" href="">Подробнее</a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="page11 construction">
+          <div class="page_container">
+            <div class="products construction__img">
+              <img src="img/slide11.png" alt="Строительство и ремонт">
+            </div>
+            <div class="products content construction__content">
+              <div class="conteiner">
+                <h2>Строительство</br> и ремонт</h2>
+                <p>Повседневная практика показывает, что новая модель организационной деятельности играет важную роль в формировании системы обучения кадров, соответствует насущным потребностям. </p>
+                <a class="btn" href="">Подробнее</a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="page12 pet-supplies">
+          <div class="page_container">
+            <div class="products pet-supplies__img">
+              <img src="img/slide12.png" alt="Зоотовары">
+            </div>
+            <div class="products content pet-supplies__content">
+              <div class="conteiner">
+                <h2>Зоотовары</h2>
+                <p>Повседневная практика показывает, что новая модель организационной деятельности играет важную роль в формировании системы обучения кадров, соответствует насущным потребностям. </p>
+                <a class="btn" href="">Подробнее</a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="page13 horeca">
+          <div class="page_container">
+            <div class="products horeca__img">
+              <img src="img/slide13.png" alt="horeca">
+            </div>
+            <div class="products content horeca__content">
+              <div class="conteiner">
+                <h2>HoReCa</h2>
+                <p>Повседневная практика показывает, что новая модель организационной деятельности играет важную роль в формировании системы обучения кадров, соответствует насущным потребностям. </p>
+                <a class="btn" href="">Подробнее</a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
     </div>
-  </div>
-</body>
-</html>
+  </body>
+  </html>
