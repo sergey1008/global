@@ -1,0 +1,424 @@
+body, html {
+  margin: 0;
+  overflow: hidden;
+  -webkit-transition: opacity 400ms;
+  -moz-transition: opacity 400ms;
+  transition: opacity 400ms;
+}
+
+body, .onepage-wrapper, html {
+  display: block;
+  position: static;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.onepage-wrapper {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: relative;
+  padding: 0;
+  -webkit-transform-style: preserve-3d;
+}
+
+.onepage-wrapper .section {
+  width: 100%;
+  height: 100%;
+}
+
+.onepage-pagination {
+  position: absolute;
+  right: 60px;
+  top: 20%;
+  z-index: 5;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.onepage-pagination li {
+  position: relative;
+  padding: 0;
+  text-align: center;
+  margin-bottom: 25px;
+}
+.onepage-pagination li a{
+  padding: 7px;
+  width: 4px;
+  height: 4px;
+  display: block;
+
+}
+.onepage-pagination li a:before{
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: rgba(0,0,0,0.85);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+}
+
+.onepage-pagination li a.active:before{
+  width: 10px;
+  height: 10px;
+  background: none;
+  border: 1px solid black;
+  margin-top: -4px;
+  left: 8px;
+  background: #000;
+}
+
+.disabled-onepage-scroll, .disabled-onepage-scroll .wrapper {
+  overflow: auto;
+}
+
+.disabled-onepage-scroll .onepage-wrapper .section {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+}
+.disabled-onepage-scroll .onepage-wrapper {
+  -webkit-transform: none !important;
+  -moz-transform: none !important;
+  transform: none !important;
+  -ms-transform: none !important;
+  min-height: 100%;
+}
+
+
+.disabled-onepage-scroll .onepage-pagination {
+  display: none;
+}
+
+body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
+  position: inherit;
+}
+
+
+.onepage-pagination li a[data-index="1"]::after {
+	position: absolute;
+	top: -11px;
+	right: 30px;
+	font-size: 16px;
+	line-height: 27px;
+	background: #fff;
+	border-radius: 30px;
+	padding: 10px 15px;
+	content: "Косметика";
+	width: 100px;
+	height: 30px;
+	opacity: 0;
+}
+
+.onepage-pagination li:hover a[data-index="1"]::after {
+	opacity: 1;
+	transition: 0.4s ease-out 0.5s;
+  z-index: 9999;
+}
+.onepage-pagination li:not(:hover) a[data-index="1"]::after {
+	opacity: 0;
+	transition: 0.4s ease-out 0.5s;
+}
+
+.onepage-pagination li a[data-index="2"]::after {
+	position: absolute;
+	top: -11px;
+	right: 30px;
+	font-size: 16px;
+	line-height: 27px;
+	background: #fff;
+	border-radius: 30px;
+	padding: 10px 15px;
+	content: "Хозтовары";
+	width: 100px;
+	height: 30px;
+	opacity: 0;
+}
+
+.onepage-pagination li:hover a[data-index="2"]::after {
+	opacity: 1;
+	transition: 0.4s ease-out 0.5s;
+  z-index: 9999;
+}
+.onepage-pagination li:not(:hover) a[data-index="2"]::after {
+	opacity: 0;
+	transition: 0.4s ease-out 0.5s;
+}
+
+.onepage-pagination li a[data-index="3"]::after {
+	position: absolute;
+	top: -11px;
+	right: 30px;
+	font-size: 16px;
+	line-height: 27px;
+	background: #fff;
+	border-radius: 30px;
+	padding: 10px 15px;
+	content: "Канцтовары";
+	width: 100px;
+	height: 30px;
+	opacity: 0;
+}
+
+.onepage-pagination li:hover a[data-index="3"]::after {
+	opacity: 1;
+	transition: 0.4s ease-out 0.5s;
+  z-index: 9999;
+}
+.onepage-pagination li:not(:hover) a[data-index="3"]::after {
+	opacity: 0;
+	transition: 0.4s ease-out 0.5s;
+}
+
+.onepage-pagination li a[data-index="4"]::after {
+	position: absolute;
+	top: -11px;
+	right: 30px;
+	font-size: 16px;
+	line-height: 27px;
+	background: #fff;
+	border-radius: 30px;
+	padding: 10px 15px;
+	content: "Электротовары";
+	width: 110px;
+	height: 30px;
+	opacity: 0;
+}
+
+.onepage-pagination li:hover a[data-index="4"]::after {
+	opacity: 1;
+	transition: 0.4s ease-out 0.5s;
+  z-index: 9999;
+}
+.onepage-pagination li:not(:hover) a[data-index="4"]::after {
+	opacity: 0;
+	transition: 0.4s ease-out 0.5s;
+}
+
+.onepage-pagination li a[data-index="5"]::after {
+	position: absolute;
+	top: -11px;
+	right: 30px;
+	font-size: 16px;
+	line-height: 27px;
+	background: #fff;
+	border-radius: 30px;
+	padding: 10px 15px;
+	content: "Товары для гриля и барбекю";
+	width: 220px;
+	height: 30px;
+	opacity: 0;
+}
+
+.onepage-pagination li:hover a[data-index="5"]::after {
+	opacity: 1;
+	transition: 0.4s ease-out 0.5s;
+  z-index: 9999;
+}
+.onepage-pagination li:not(:hover) a[data-index="5"]::after {
+	opacity: 0;
+	transition: 0.4s ease-out 0.5s;
+}
+
+.onepage-pagination li a[data-index="6"]::after {
+	position: absolute;
+	top: -11px;
+	right: 30px;
+	font-size: 16px;
+	line-height: 27px;
+	background: #fff;
+	border-radius: 30px;
+	padding: 10px 15px;
+	content: "Баня и сауна";
+	width: 100px;
+	height: 30px;
+	opacity: 0;
+}
+
+.onepage-pagination li:hover a[data-index="6"]::after {
+	opacity: 1;
+	transition: 0.4s ease-out 0.5s;
+  z-index: 9999;
+}
+.onepage-pagination li:not(:hover) a[data-index="6"]::after {
+	opacity: 0;
+	transition: 0.4s ease-out 0.5s;
+}
+
+.onepage-pagination li a[data-index="7"]::after {
+	position: absolute;
+	top: -11px;
+	right: 30px;
+	font-size: 16px;
+	line-height: 27px;
+	background: #fff;
+	border-radius: 30px;
+	padding: 10px 15px;
+	content: "Бытовая технка";
+	width: 130px;
+	height: 30px;
+	opacity: 0;
+}
+
+.onepage-pagination li:hover a[data-index="7"]::after {
+	opacity: 1;
+	transition: 0.4s ease-out 0.5s;
+  z-index: 9999;
+}
+.onepage-pagination li:not(:hover) a[data-index="7"]::after {
+	opacity: 0;
+	transition: 0.4s ease-out 0.5s;
+}
+
+.onepage-pagination li a[data-index="8"]::after {
+	position: absolute;
+	top: -11px;
+	right: 30px;
+	font-size: 16px;
+	line-height: 27px;
+	background: #fff;
+	border-radius: 30px;
+	padding: 10px 15px;
+	content: "Зажигалки";
+	width: 100px;
+	height: 30px;
+	opacity: 0;
+}
+
+.onepage-pagination li:hover a[data-index="8"]::after {
+	opacity: 1;
+	transition: 0.4s ease-out 0.5s;
+  z-index: 9999;
+}
+.onepage-pagination li:not(:hover) a[data-index="8"]::after {
+	opacity: 0;
+	transition: 0.4s ease-out 0.5s;
+}
+
+.onepage-pagination li a[data-index="9"]::after {
+	position: absolute;
+	top: -11px;
+	right: 30px;
+	font-size: 16px;
+	line-height: 27px;
+	background: #fff;
+	border-radius: 30px;
+	padding: 10px 15px;
+	content: "Автотовары";
+	width: 100px;
+	height: 30px;
+	opacity: 0;
+}
+
+.onepage-pagination li:hover a[data-index="9"]::after {
+	opacity: 1;
+	transition: 0.4s ease-out 0.5s;
+  z-index: 9999;
+}
+.onepage-pagination li:not(:hover) a[data-index="9"]::after {
+	opacity: 0;
+	transition: 0.4s ease-out 0.5s;
+}
+
+.onepage-pagination li a[data-index="10"]::after {
+	position: absolute;
+	top: -11px;
+	right: 30px;
+	font-size: 16px;
+	line-height: 27px;
+	background: #fff;
+	border-radius: 30px;
+	padding: 10px 15px;
+	content: "Товары для детей";
+	width: 170px;
+	height: 30px;
+	opacity: 0;
+}
+
+.onepage-pagination li:hover a[data-index="10"]::after {
+	opacity: 1;
+	transition: 0.4s ease-out 0.5s;
+  z-index: 9999;
+}
+.onepage-pagination li:not(:hover) a[data-index="10"]::after {
+	opacity: 0;
+	transition: 0.4s ease-out 0.5s;
+}
+
+.onepage-pagination li a[data-index="11"]::after {
+	position: absolute;
+	top: -11px;
+	right: 30px;
+	font-size: 16px;
+	line-height: 27px;
+	background: #fff;
+	border-radius: 30px;
+	padding: 10px 15px;
+	content: "Строительство и ремонт";
+	width: 200px;
+	height: 30px;
+	opacity: 0;
+}
+
+.onepage-pagination li:hover a[data-index="11"]::after {
+	opacity: 1;
+	transition: 0.4s ease-out 0.5s;
+  z-index: 9999;
+}
+.onepage-pagination li:not(:hover) a[data-index="11"]::after {
+	opacity: 0;
+	transition: 0.4s ease-out 0.5s;
+}
+
+.onepage-pagination li a[data-index="12"]::after {
+	position: absolute;
+	top: -11px;
+	right: 30px;
+	font-size: 16px;
+	line-height: 27px;
+	background: #fff;
+	border-radius: 30px;
+	padding: 10px 15px;
+	content: "Зоотовары";
+	width: 100px;
+	height: 30px;
+	opacity: 0;
+}
+
+.onepage-pagination li:hover a[data-index="12"]::after {
+	opacity: 1;
+	transition: 0.4s ease-out 0.5s;
+  z-index: 9999;
+}
+.onepage-pagination li:not(:hover) a[data-index="12"]::after {
+	opacity: 0;
+	transition: 0.4s ease-out 0.5s;
+}
+
+.onepage-pagination li a[data-index="13"]::after {
+	position: absolute;
+	top: -11px;
+	right: 30px;
+	font-size: 16px;
+	line-height: 27px;
+	background: #fff;
+	border-radius: 30px;
+	padding: 10px 15px;
+	content: "HoReCa";
+	width: 100px;
+	height: 30px;
+	opacity: 0;
+}
+
+.onepage-pagination li:hover a[data-index="13"]::after {
+	opacity: 1;
+	transition: 0.4s ease-out 0.5s;
+  z-index: 9999;
+}
+.onepage-pagination li:not(:hover) a[data-index="13"]::after {
+	opacity: 0;
+	transition: 0.4s ease-out 0.5s;
+}
